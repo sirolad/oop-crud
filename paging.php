@@ -1,14 +1,14 @@
 <?php
-echo "<ul class='pagination'>";
+echo "<ul class=\"pagination\">";
 
 // button for first page
 if($page>1){
     echo "<li><a href='{$page_url}' title='Go to the first page.'>";
-        echo "<<";
+        echo "First Page";
     echo "</a></li>";
 }
 
-// calculate total pages
+// count all products in the database to calculate total pages
 $total_pages = ceil($total_rows / $records_per_page);
 
 // range of links to show
@@ -37,8 +37,8 @@ for ($x=$initial_num; $x<$condition_limit_num; $x++) {
 
 // button for last page
 if($page<$total_pages){
-    echo "<li><a href='" .$page_url. "page={$total_pages}' title='Last page is {$total_pages}.'>";
-        echo ">>";
+    echo "<li><a href='" .$page_url . "page={$total_pages}' title='Last page is {$total_pages}.'>";
+        echo "Last Page";
     echo "</a></li>";
 }
 
